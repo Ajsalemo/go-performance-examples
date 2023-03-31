@@ -3,16 +3,13 @@ package main
 import (
 	"log"
 	"net/http"
+	_ "net/http/pprof"
 
-	"github.com/pkg/profile"
-
-	"github.com/azureossd/go-performance-examples/profile/fibonacci"
-	"github.com/azureossd/go-performance-examples/profile/index"
+	"github.com/azureossd/go-performance-examples/net-http-pprof/fibonacci"
+	"github.com/azureossd/go-performance-examples/net-http-pprof/index"
 )
 
 func main() {
-	// This creates a file named cpu.pprof in the current directory
-	defer profile.Start(profile.ProfilePath(".")).Stop()
 	http.HandleFunc("/", index.Index)
 	http.HandleFunc("/api/fib", fibonacci.Fibonacci)
 

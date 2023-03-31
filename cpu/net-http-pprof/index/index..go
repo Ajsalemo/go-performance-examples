@@ -1,4 +1,4 @@
-package cars
+package index
 
 import (
 	"encoding/json"
