@@ -1,4 +1,4 @@
-module github.com/azureossd/go-performance-examples/cpu/profile
+module github.com/azureossd/go-performance-examples/memory/profile
 
 go 1.20
 
